@@ -19,6 +19,17 @@ The server can be accessed by visiting **localhost:8080** in a browser.
 
 ---
 ### (Optional) Change the port
+The default port is set to 8080.
+
+It can be simply mapped to a different port. Using the example above, this can be accomplished by
+```
+docker build -t py-flask .
+docker run -d --name python-server -p 1234:8080 py-flask
+```
+This will allow the server to be accessible through **localhost:1234**
+
+**OR**
+
 To change the port : -
 1. In Dockerfile, change the value next to **EXPOSE**
 ```
